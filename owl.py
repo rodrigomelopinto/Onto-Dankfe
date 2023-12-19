@@ -1,0 +1,1 @@
+#This will be the script to read te ontologies that are in OWL language
