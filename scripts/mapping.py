@@ -1,81 +1,63 @@
+import pandas as pd
 from rdflib import Graph, URIRef
 from datetime import datetime
 
-def read_owl_ontology(owl_content):
+def read_season_ontology(file_path):
     g = Graph()
-    g.parse(data=owl_content, format="turtle")
+    g.parse(file_path, format="xml")  # Assuming the ontology is in RDF/XML format
     return g
 
-def extract_season_intervals(ontology_graph):
+def infer_season(date_value, season_intervals):
+    date_obj = datetime.strptime(date_value, "%Y-%m-%d")
+
+    for season, interval in season_intervals.items():
+        start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), interval.split("/"))
+        start_date = start_date.replace(year=date_obj.year)
+        end_date = end_date.replace(year=date_obj.year)
+        if start_date > end_date:
+            end_date = end_date.replace(year=date_obj.year + 1)
+        if start_date <= date_obj <= end_date:
+            return season
+
+    return None  # Return None if no matching season is found
+
+def process_season_csv(input_csv_path, output_csv_path, ontology_graph):
+    # Read the input CSV file
+    df = pd.read_csv(input_csv_path)
+
+    # Extract season intervals from the ontology
     season_intervals = {}
     for season in ["Winter", "Spring", "Summer", "Autumn"]:
         season_interval_obj = ontology_graph.value(URIRef(f"http://example.org#{season}"), URIRef("http://example.org#hasSeasonInterval"), None)
         if season_interval_obj is not None:
-            season_interval = str(season_interval_obj)
-            season_intervals[season] = season_interval
-    return season_intervals
+            season_intervals[season] = str(season_interval_obj)
 
-def infer_season(date_value, season_intervals):
-    date_obj = datetime.strptime(date_value, "%Y-%m-%d")
-    for season, interval in season_intervals.items():
-        start_month, start_day, end_month, end_day = map(int, interval.split("/")[0].split("-") + interval.split("/")[1].split("-"))
+    # Create a new column for Season
+    df["Season"] = ""
 
-        # Adjust the condition for Winter to consider the span across two years
-        if season == "Winter" and (
-            (start_month, start_day) <= (date_obj.month, date_obj.day) or
-            (date_obj.month, date_obj.day) <= (end_month, end_day)
-        ):
-            return season
-        elif (start_month, start_day) <= (date_obj.month, date_obj.day) <= (end_month, end_day):
-            return season
-    return None
+    # Process each row in the data frame
+    for index, row in df.iterrows():
+        date_value = row["Date"]  # Assuming the "Date" column in the CSV contains date values
 
-# Example OWL ontology content
-owl_content = """
-@prefix example: <http://example.org#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-example:Winter
-    a example:Season ;
-    example:hasSeasonInterval "12-21/03-20"^^xsd:string .
+        # Infer season based on the date value
+        season = infer_season(date_value, season_intervals)
 
-example:Spring
-    a example:Season ;
-    example:hasSeasonInterval "03-21/06-20"^^xsd:string .
+        # Store the season for each row
+        df.at[index, "Season"] = season
 
-example:Summer
-    a example:Season ;
-    example:hasSeasonInterval "06-21/09-22"^^xsd:string .
+    # Save the updated data frame to a new CSV file
+    df.to_csv(output_csv_path, index=False)
 
-example:Autumn
-    a example:Season ;
-    example:hasSeasonInterval "09-23/12-20"^^xsd:string .
-"""
+# Example season ontology file path
+season_ontology_file_path = "/home/rodrirocki/Thesis/ontologies/mapping.owl"
 
-# Read OWL ontology from content
-ontology_graph = read_owl_ontology(owl_content)
+# Read season ontology from the specified file
+season_ontology_graph = read_season_ontology(season_ontology_file_path)
 
-# Extract season intervals from the ontology
-season_intervals = extract_season_intervals(ontology_graph)
+# Input CSV file path and output CSV file path
+season_input_csv_path = "/home/rodrirocki/Thesis/datasets/test_dataset.csv"
+season_output_csv_path = "/home/rodrirocki/Thesis/datasets/generated_dataset.csv"
 
-# Function to infer season based on date
-def get_season_for_date(date_value):
-    return infer_season(date_value, season_intervals)
-
-# Example date values
-date_value1 = "2023-05-15"
-date_value2 = "2000-12-25"
-date_value3 = "1900-07-24"
-date_value4 = "2001-12-17"
-
-# Infer seasons based on date values
-season1 = get_season_for_date(date_value1)
-season2 = get_season_for_date(date_value2)
-season3 = get_season_for_date(date_value3)
-season4 = get_season_for_date(date_value4)
-
-# Print the inferred seasons
-print(f"Season for {date_value1}: {season1}")
-print(f"Season for {date_value2}: {season2}")
-print(f"Season for {date_value3}: {season3}")
-print(f"Season for {date_value4}: {season4}")
+# Process the CSV file and create a new CSV file with the Season variable
+process_season_csv(season_input_csv_path, season_output_csv_path, season_ontology_graph)

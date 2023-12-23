@@ -1,9 +1,10 @@
+import pandas as pd
 from rdflib import Graph, URIRef
 from datetime import datetime
 
-def read_owl_ontology(owl_content):
+def read_owl_ontology(file_path):
     g = Graph()
-    g.parse(data=owl_content, format="turtle")
+    g.parse(file_path, format="xml")  # Assuming the ontology is in RDF/XML format
     return g
 
 def extract_date_components(ontology_graph):
@@ -24,38 +25,42 @@ def infer_date_components(date_value, date_components):
         components[component] = query_result
     return components
 
-# Example OWL ontology content
-owl_content = """
-@prefix example: <http://example.org#> .
+def process_csv(input_csv_path, output_csv_path, ontology_graph):
+    # Read the input CSV file
+    df = pd.read_csv(input_csv_path)
 
-example:YearQuery
-    a example:DateComponentQuery ;
-    example:hasComponent "%Y" .
+    # Extract date components from the ontology
+    date_components = extract_date_components(ontology_graph)
 
-example:MonthQuery
-    a example:DateComponentQuery ;
-    example:hasComponent "%m" .
+    # Create new columns for Day, Month, and Year
+    df["Day"] = ""
+    df["Month"] = ""
+    df["Year"] = ""
 
-example:DayQuery
-    a example:DateComponentQuery ;
-    example:hasComponent "%d" .
-"""
+    # Process each row in the data frame
+    for index, row in df.iterrows():
+        date_value = row["Date"]  # Assuming the "Date" column in the CSV contains date values
 
-# Read OWL ontology from content
-ontology_graph = read_owl_ontology(owl_content)
+        # Infer date components based on the date value
+        components = infer_date_components(date_value, date_components)
 
-# Extract date components from the ontology
-date_components = extract_date_components(ontology_graph)
+        # Store the components for each row
+        df.at[index, "Day"] = components["Day"]
+        df.at[index, "Month"] = components["Month"]
+        df.at[index, "Year"] = components["Year"]
 
-# Function to infer date components based on date
-def get_date_components(date_value):
-    return infer_date_components(date_value, date_components)
+    # Save the updated data frame to a new CSV file
+    df.to_csv(output_csv_path, index=False)
 
-# Example date value
-date_value = "2023-05-15"
+# Example OWL ontology file path
+owl_file_path = "/home/rodrirocki/Thesis/ontologies/test.owl"
 
-# Infer date components based on the date value
-components = get_date_components(date_value)
+# Read OWL ontology from the specified file
+ontology_graph = read_owl_ontology(owl_file_path)
 
-# Print the inferred date components
-print(f"Date components for {date_value}: {components}")
+# Input CSV file path and output CSV file path
+input_csv_path = "/home/rodrirocki/Thesis/datasets/test_dataset.csv"
+output_csv_path = "/home/rodrirocki/Thesis/datasets/generated_dataset.csv"
+
+# Process the CSV file and create a new CSV file with date components
+process_csv(input_csv_path, output_csv_path, ontology_graph)
