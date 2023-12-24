@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY example "http://example.org#" >
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:example="http://example.org#">
+
+    <!-- Classes -->
+    <owl:Class rdf:about="&example;DecompositionOperation"/>
+    <owl:Class rdf:about="&example;MappingOperation"/>
+    <owl:Class rdf:about="&example;Variable"/>
+
+    <!-- Individuals: Decomposition Templates -->
+    <owl:NamedIndividual rdf:about="&example;YearDecompositionTemplate">
+        <rdf:type rdf:resource="&example;DecompositionOperation"/>
+        <example:hasComponent rdf:datatype="&xsd;string">%Y</example:hasComponent>
+        <example:hasName rdf:datatype="&xsd;string">Year</example:hasName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&example;MonthDecompositionTemplate">
+        <rdf:type rdf:resource="&example;DecompositionOperation"/>
+        <example:hasComponent rdf:datatype="&xsd;string">%m</example:hasComponent>
+        <example:hasName rdf:datatype="&xsd;string">Month</example:hasName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&example;DayDecompositionTemplate">
+        <rdf:type rdf:resource="&example;DecompositionOperation"/>
+        <example:hasComponent rdf:datatype="&xsd;string">%d</example:hasComponent>
+        <example:hasName rdf:datatype="&xsd;string">Day</example:hasName>
+    </owl:NamedIndividual>
+    
+
+    
+
+    <!-- Individuals: Mapping Templates -->
+    <owl:NamedIndividual rdf:about="&example;SeasonMappingTemplate">
+        <rdf:type rdf:resource="&example;MappingOperation"/>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">12-21/03-20</example:hasSeasonInterval>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">03-21/06-20</example:hasSeasonInterval>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">06-21/09-22</example:hasSeasonInterval>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">09-23/12-20</example:hasSeasonInterval>
+    </owl:NamedIndividual>
+
+    <!-- Individuals: Variables -->
+    <owl:NamedIndividual rdf:about="&example;Date">
+        <rdf:type rdf:resource="&example;Variable"/>
+        <example:hasOperation rdf:resource="&example;YearDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;MonthDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;DayDecompositionTemplate"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
