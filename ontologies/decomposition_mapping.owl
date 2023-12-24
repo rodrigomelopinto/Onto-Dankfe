@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY example "http://example.org#" >
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:example="http://example.org#">
+
+    <!-- Classes -->
+    <owl:Class rdf:about="&example;SeasonRule"/>
+    <owl:Class rdf:about="&example;SeasonInterval"/>
+    <owl:Class rdf:about="&example;DateComponentQuery"/>
+
+    <!-- Individual: Winter -->
+    <owl:NamedIndividual rdf:about="&example;Winter">
+        <rdf:type rdf:resource="&example;SeasonRule"/>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">12-21/03-20</example:hasSeasonInterval>
+    </owl:NamedIndividual>
+
+    <!-- Individual: Spring -->
+    <owl:NamedIndividual rdf:about="&example;Spring">
+        <rdf:type rdf:resource="&example;SeasonRule"/>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">03-21/06-20</example:hasSeasonInterval>
+    </owl:NamedIndividual>
+
+    <!-- Individual: Summer -->
+    <owl:NamedIndividual rdf:about="&example;Summer">
+        <rdf:type rdf:resource="&example;SeasonRule"/>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">06-21/09-22</example:hasSeasonInterval>
+    </owl:NamedIndividual>
+
+    <!-- Individual: Autumn -->
+    <owl:NamedIndividual rdf:about="&example;Autumn">
+        <rdf:type rdf:resource="&example;SeasonRule"/>
+        <example:hasSeasonInterval rdf:datatype="&xsd;string">09-23/12-20</example:hasSeasonInterval>
+    </owl:NamedIndividual>
+
+    <!-- Individual: YearQuery -->
+    <owl:NamedIndividual rdf:about="&example;YearQuery">
+        <rdf:type rdf:resource="&example;DateComponentQuery"/>
+        <example:hasComponent>%Y</example:hasComponent>
+    </owl:NamedIndividual>
+
+    <!-- Individual: MonthQuery -->
+    <owl:NamedIndividual rdf:about="&example;MonthQuery">
+        <rdf:type rdf:resource="&example;DateComponentQuery"/>
+        <example:hasComponent>%m</example:hasComponent>
+    </owl:NamedIndividual>
+
+    <!-- Individual: DayQuery -->
+    <owl:NamedIndividual rdf:about="&example;DayQuery">
+        <rdf:type rdf:resource="&example;DateComponentQuery"/>
+        <example:hasComponent>%d</example:hasComponent>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
