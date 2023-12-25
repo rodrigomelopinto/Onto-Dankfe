@@ -39,20 +39,44 @@
     
 
     <!-- Individuals: Mapping Templates -->
-    <owl:NamedIndividual rdf:about="&example;SeasonMappingTemplate">
-        <rdf:type rdf:resource="&example;MappingOperation"/>
-        <example:hasSeasonInterval rdf:datatype="&xsd;string">12-21/03-20</example:hasSeasonInterval>
-        <example:hasSeasonInterval rdf:datatype="&xsd;string">03-21/06-20</example:hasSeasonInterval>
-        <example:hasSeasonInterval rdf:datatype="&xsd;string">06-21/09-22</example:hasSeasonInterval>
-        <example:hasSeasonInterval rdf:datatype="&xsd;string">09-23/12-20</example:hasSeasonInterval>
-    </owl:NamedIndividual>
+    <rdf:Description rdf:about="&example;SeasonMappingTemplate">
+    <rdf:type rdf:resource="&example;MappingOperation"/>
+    <example:hasName rdf:datatype="&xsd;string">Season</example:hasName>
+    
+    <example:hasMapping>
+        <rdf:Description rdf:about="&example;Winter">
+            <rdf:type rdf:resource="&example;MappingInterval"/>
+            <example:hasMappingInterval rdf:datatype="&xsd;string">12-21/03-20</example:hasMappingInterval>
+        </rdf:Description>
+    </example:hasMapping>
+    
+    <example:hasMapping>
+        <rdf:Description rdf:about="&example;Spring">
+            <rdf:type rdf:resource="&example;MappingInterval"/>
+            <example:hasMappingInterval rdf:datatype="&xsd;string">03-21/06-20</example:hasMappingInterval>
+        </rdf:Description>
+    </example:hasMapping>
+    
+    <example:hasMapping>
+        <rdf:Description rdf:about="&example;Summer">
+            <rdf:type rdf:resource="&example;MappingInterval"/>
+            <example:hasMappingInterval rdf:datatype="&xsd;string">06-21/09-22</example:hasMappingInterval>
+        </rdf:Description>
+    </example:hasMapping>
+    
+    <example:hasMapping>
+        <rdf:Description rdf:about="&example;Autumn">
+            <rdf:type rdf:resource="&example;MappingInterval"/>
+            <example:hasMappingInterval rdf:datatype="&xsd;string">09-23/12-20</example:hasMappingInterval>
+        </rdf:Description>
+    </example:hasMapping>
+    </rdf:Description>
+
 
     <!-- Individuals: Variables -->
     <owl:NamedIndividual rdf:about="&example;Date">
         <rdf:type rdf:resource="&example;Variable"/>
-        <example:hasOperation rdf:resource="&example;YearDecompositionTemplate"/>
-        <example:hasOperation rdf:resource="&example;MonthDecompositionTemplate"/>
-        <example:hasOperation rdf:resource="&example;DayDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;SeasonMappingTemplate"/>
     </owl:NamedIndividual>
 
 </rdf:RDF>

@@ -16,7 +16,6 @@ def process_templates_ontology(ontology_graph, input_csv_path, output_csv_path):
         variable = str(variable).split("#")[-1]
         variable_operations.setdefault(variable, []).append(str(operation_template))  
     
-
     # Read the input CSV file
     df = pd.read_csv(input_csv_path)
 
@@ -41,7 +40,7 @@ def apply_operation(value, row, operation_template):
         if "DecompositionTemplate" in operation_template:
             return infer_decomposition(value, operation_template)
         elif "MappingTemplate" in operation_template:
-            return infer_mapping(value, operation_template, row)
+            return infer_mapping(value, operation_template)
         else:
             return None
     except ValueError:
@@ -56,13 +55,24 @@ def infer_decomposition(value, template):
         components[component] = query_result
     return components
 
-def infer_mapping(date_value, season_interval, row):
+def infer_mapping(date_value, template):
     # Apply mapping rule dynamically based on the ontology
+    components = process_mapping(templates_ontology_graph, template)
     date_obj = datetime.strptime(date_value, "%Y-%m-%d")
-    for interval in season_interval.split("/"):
-        start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), interval.split("-"))
+    result = {}
+    variable_name = ""
+    for season, interval in components.items():
+        if season == "variable":
+            variable_name = interval
+            continue
+        start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), interval.split("/"))
+        start_date = start_date.replace(year=date_obj.year)
+        end_date = end_date.replace(year=date_obj.year)
+        if start_date > end_date:
+            end_date = end_date.replace(year=date_obj.year + 1)
         if start_date <= date_obj <= end_date:
-            return interval
+            result[variable_name] = season
+            return result
 
     return None
 
@@ -77,6 +87,20 @@ def process_decomposition(ontology_graph, operation_template):
         component_name = str(component_name)
         components[component_name] = component_query
         return components
+
+
+def process_mapping(ontology_graph, operation_template):
+    components = {}
+    for description in ontology_graph.objects(URIRef(operation_template), URIRef("http://example.org#hasMapping")):
+        name = description.split("#")[-1]
+        variable_name = ontology_graph.value(URIRef(operation_template), URIRef("http://example.org#hasName"), None)
+        interval = ontology_graph.value(description, URIRef("http://example.org#hasMappingInterval"), None)
+        if interval is not None:
+            components[str(name)] = str(interval)
+            components["variable"] = str(variable_name)
+    return components
+    
+
 
 # Example templates ontology file path
 templates_ontology_file_path = "/home/rodrirocki/Thesis/ontologies/templates.owl"
