@@ -61,17 +61,19 @@ def infer_mapping(date_value, template):
     date_obj = datetime.strptime(date_value, "%Y-%m-%d")
     result = {}
     variable_name = ""
-    for season, interval in components.items():
-        if season == "variable":
-            variable_name = interval
+    for key, value in components.items():
+        if key == "variable":
+            variable_name = value
+    for key, value in components.items():
+        if key == "variable":
             continue
-        start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), interval.split("/"))
+        start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), value.split("/"))
         start_date = start_date.replace(year=date_obj.year)
         end_date = end_date.replace(year=date_obj.year)
         if start_date > end_date:
             end_date = end_date.replace(year=date_obj.year + 1)
         if start_date <= date_obj <= end_date:
-            result[variable_name] = season
+            result[variable_name] = key
             return result
 
     return None

@@ -77,6 +77,9 @@
     <owl:NamedIndividual rdf:about="&example;Date">
         <rdf:type rdf:resource="&example;Variable"/>
         <example:hasOperation rdf:resource="&example;SeasonMappingTemplate"/>
+        <example:hasOperation rdf:resource="&example;YearDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;MonthDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;DayDecompositionTemplate"/>
     </owl:NamedIndividual>
 
 </rdf:RDF>
