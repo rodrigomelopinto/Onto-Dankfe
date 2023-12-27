@@ -17,22 +17,16 @@
     <owl:Class rdf:about="&example;Variable"/>
 
     <!-- Individuals: Decomposition Templates -->
-    <owl:NamedIndividual rdf:about="&example;YearDecompositionTemplate">
+    <owl:NamedIndividual rdf:about="&example;DateDecompositionTemplate">
         <rdf:type rdf:resource="&example;DecompositionOperation"/>
-        <example:hasComponent rdf:datatype="&xsd;string">%Y</example:hasComponent>
-        <example:hasName rdf:datatype="&xsd;string">Year</example:hasName>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="&example;MonthDecompositionTemplate">
-        <rdf:type rdf:resource="&example;DecompositionOperation"/>
-        <example:hasComponent rdf:datatype="&xsd;string">%m</example:hasComponent>
-        <example:hasName rdf:datatype="&xsd;string">Month</example:hasName>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="&example;DayDecompositionTemplate">
-        <rdf:type rdf:resource="&example;DecompositionOperation"/>
-        <example:hasComponent rdf:datatype="&xsd;string">%d</example:hasComponent>
         <example:hasName rdf:datatype="&xsd;string">Day</example:hasName>
+        <example:hasDecompositionTemplate rdf:datatype="&xsd;string">(?P&lt;Year&gt;\d+)-(?P&lt;Month&gt;\d+)-(?P&lt;Day&gt;\d+)</example:hasDecompositionTemplate>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&example;NameDecompositionTemplate">
+        <rdf:type rdf:resource="&example;DecompositionOperation"/>
+        <example:hasName rdf:datatype="&xsd;string">LastName</example:hasName>
+        <example:hasDecompositionTemplate rdf:datatype="&xsd;string">(?P&lt;FirstName&gt;[^_]+)_(?P&lt;LastName&gt;[^_]+)</example:hasDecompositionTemplate>
     </owl:NamedIndividual>
     
 
@@ -76,10 +70,7 @@
     <!-- Individuals: Variables -->
     <owl:NamedIndividual rdf:about="&example;Date">
         <rdf:type rdf:resource="&example;Variable"/>
-        <example:hasOperation rdf:resource="&example;SeasonMappingTemplate"/>
-        <example:hasOperation rdf:resource="&example;YearDecompositionTemplate"/>
-        <example:hasOperation rdf:resource="&example;MonthDecompositionTemplate"/>
-        <example:hasOperation rdf:resource="&example;DayDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;DateDecompositionTemplate"/>
     </owl:NamedIndividual>
 
 </rdf:RDF>

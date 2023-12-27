@@ -1,9 +1,24 @@
-from datetime import datetime
+import re
 
-def infer_date_components(date_value, date_components):
-    date_obj = datetime.strptime(date_value, "%Y-%m-%d")
-    components = {}
-    for component, query in date_components.items():
-        query_result = date_obj.strftime(query)
-        components[component] = query_result
-    return components
+def infer_decomposition(value, template):
+    match = re.match(template, value)
+    print(value)
+    print(template)
+    print(match)
+
+    if match:
+        return match.groupdict()
+
+    return {}
+
+# Example usage for date variable
+date_value = "14-03-2021"
+date_template = "(?P<Day>\\d+)-(?P<Month>\\d+)-(?P<Year>\\d+)"
+date_result = infer_decomposition(date_value, date_template)
+print("Date Decomposition Result:", date_result)
+
+# Example usage for name variable
+name_value = "Rodrigo_Pinto"
+name_template = "(?P<first>[^_]+)_(?P<last>[^_]+)"
+name_result = infer_decomposition(name_value, name_template)
+print("Name Decomposition Result:", name_result)

@@ -1,6 +1,7 @@
 # generic_templates_script.py
 
 import pandas as pd
+import re
 from rdflib import Graph, URIRef
 from datetime import datetime
 
@@ -18,18 +19,17 @@ def process_templates_ontology(ontology_graph, input_csv_path, output_csv_path):
     
     # Read the input CSV file
     df = pd.read_csv(input_csv_path)
-
     # Process each row in the data frame
     for index, row in df.iterrows():
         for variable, operation_templates in variable_operations.items():
             # Apply the operation rule dynamically based on the ontology
             for operation_template in operation_templates:
                 result = apply_operation(row[variable], row, operation_template)
+                new_variable = get_variable_name(operation_template)
             
                 # Update the DataFrame with the new variables
                 if result is not None:
-                    new_variable_name = [f"{component}" for component in result]
-                    df.at[index, new_variable_name[0]] = result[new_variable_name[0]]
+                    df.at[index, new_variable] = result[new_variable]
 
     # Save the updated data frame to a new CSV file
     df.to_csv(output_csv_path, index=False)
@@ -48,58 +48,61 @@ def apply_operation(value, row, operation_template):
 
 def infer_decomposition(value, template):
     # Decompose based on the provided template
-    components = process_decomposition(templates_ontology_graph, template)
-    date_obj = datetime.strptime(value, "%Y-%m-%d")
-    for component, query in components.items():
-        query_result = date_obj.strftime(query)
-        components[component] = query_result
-    return components
+    decomposition_template = process_decomposition(templates_ontology_graph, template)
+    match = re.match(decomposition_template, value)
+
+    if match:
+        return match.groupdict()
+
+    return {}
 
 def infer_mapping(date_value, template):
     # Apply mapping rule dynamically based on the ontology
     components = process_mapping(templates_ontology_graph, template)
+    variable = get_variable_name(template)
     date_obj = datetime.strptime(date_value, "%Y-%m-%d")
     result = {}
-    variable_name = ""
     for key, value in components.items():
-        if key == "variable":
-            variable_name = value
-    for key, value in components.items():
-        if key == "variable":
-            continue
         start_date, end_date = map(lambda x: datetime.strptime(x, "%m-%d"), value.split("/"))
         start_date = start_date.replace(year=date_obj.year)
         end_date = end_date.replace(year=date_obj.year)
         if start_date > end_date:
-            end_date = end_date.replace(year=date_obj.year + 1)
-        if start_date <= date_obj <= end_date:
-            result[variable_name] = key
-            return result
+            if date_obj >= start_date or date_obj <= end_date.replace(year=date_obj.year + 1):
+                result[variable] = key
+            
+        else:
+            if start_date <= date_obj <= end_date:
+                result[variable] = key
 
+    return result if result else None
+
+
+def get_variable_name(operation_template):
+    # Get the name of the variable from the operation template
+    query = URIRef(operation_template)
+    variable_name = templates_ontology_graph.value(query, URIRef("http://example.org#hasName"), None)
+    if variable_name is not None:
+        return str(variable_name).split("#")[-1]
     return None
 
 
+
 def process_decomposition(ontology_graph, operation_template):
-    components = {}
-    component_query = URIRef(operation_template)
-    component_name = ontology_graph.value(component_query, URIRef("http://example.org#hasName"), None)
-    component_obj = ontology_graph.value(component_query, URIRef("http://example.org#hasComponent"), None)
-    if component_obj is not None:
-        component_query = str(component_obj)
-        component_name = str(component_name)
-        components[component_name] = component_query
-        return components
+    decomposition_template = ""
+    query = URIRef(operation_template)
+    template = ontology_graph.value(query, URIRef("http://example.org#hasDecompositionTemplate"), None)
+    if template is not None:
+        decomposition_template = str(template)
+        return decomposition_template
 
 
 def process_mapping(ontology_graph, operation_template):
     components = {}
     for description in ontology_graph.objects(URIRef(operation_template), URIRef("http://example.org#hasMapping")):
         name = description.split("#")[-1]
-        variable_name = ontology_graph.value(URIRef(operation_template), URIRef("http://example.org#hasName"), None)
         interval = ontology_graph.value(description, URIRef("http://example.org#hasMappingInterval"), None)
         if interval is not None:
             components[str(name)] = str(interval)
-            components["variable"] = str(variable_name)
     return components
     
 
