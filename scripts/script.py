@@ -1,6 +1,7 @@
 # generic_templates_script.py
 
 import pandas as pd
+import math
 import re
 from rdflib import Graph, URIRef
 from datetime import datetime
@@ -11,40 +12,75 @@ def read_templates_ontology(file_path):
     return g
 
 def process_templates_ontology(ontology_graph, input_csv_path, output_csv_path):
-    # Extract variable-operation relationships from the ontology
     variable_operations = {}
+    
     for variable, operation_template in ontology_graph.subject_objects(URIRef("http://example.org#hasOperation")):
         variable = str(variable).split("#")[-1]
-        variable_operations.setdefault(variable, []).append(str(operation_template))  
-    
-    # Read the input CSV file
-    df = pd.read_csv(input_csv_path)
-    # Process each row in the data frame
-    for index, row in df.iterrows():
-        for variable, operation_templates in variable_operations.items():
-            # Apply the operation rule dynamically based on the ontology
-            for operation_template in operation_templates:
-                result = apply_operation(row[variable], row, operation_template)
-                new_variable = get_variable_name(operation_template)
-            
-                # Update the DataFrame with the new variables
-                if result is not None:
-                    df.at[index, new_variable] = result[new_variable]
+        operation_template = str(operation_template)
+        
+        if "MappingTemplate" in operation_template:
+            variable_operations.setdefault("mapping", {}).setdefault(variable, []).append(operation_template)
+        elif "DecompositionTemplate" in operation_template:
+            variable_operations.setdefault("decomposition", {}).setdefault(variable, []).append(operation_template)
+        elif "AlgebraicTemplate" in operation_template:
+            variable_operations.setdefault("algebraic", {}).setdefault(variable, []).append(operation_template)
 
-    # Save the updated data frame to a new CSV file
+    
+    df = pd.read_csv(input_csv_path)
+    
+    for index, row in df.iterrows():
+        for variable_type, operations in variable_operations.items():
+            for variable, operation_templates in operations.items():
+                for operation_template in operation_templates:
+                    if variable_type == "mapping":
+                        result = infer_mapping(row[variable], operation_template)
+                    elif variable_type == "decomposition":
+                        result = infer_decomposition(row[variable], operation_template)
+                    elif variable_type == "algebraic":
+                        result = perform_algebraic_operation(operation_template, row)
+
+                    new_variable = get_variable_name(operation_template)
+
+                    if result is not None:
+                        df.at[index, new_variable] = result[new_variable]
+
     df.to_csv(output_csv_path, index=False)
-            
-def apply_operation(value, row, operation_template):
-    try:
-        # Dynamic application of decomposition or mapping based on the ontology
-        if "DecompositionTemplate" in operation_template:
-            return infer_decomposition(value, operation_template)
-        elif "MappingTemplate" in operation_template:
-            return infer_mapping(value, operation_template)
-        else:
-            return None
-    except ValueError:
-        return None
+
+
+def perform_algebraic_operation(operation_template, row):
+    query = URIRef(operation_template)
+    new_variable = get_variable_name(operation_template)
+    result = None
+    operands = []
+    operation_type = templates_ontology_graph.value(query, URIRef("http://example.org#hasOperationType"), None)
+    for operand in templates_ontology_graph.objects(query, URIRef("http://example.org#hasOperand")):
+        operands.append(str(operand).split("#")[-1])
+    # Extract values of the variables involved in the algebraic operation
+    variable_data = {operand: row[operand] for operand in operands}
+
+    if "+" in operation_type:
+        return {new_variable: sum(variable_data.values())}
+    elif "/" in operation_type:
+        if variable_data[operands[1]] == 0:
+            return {new_variable: None}
+        return {new_variable: round(variable_data[operands[0]] / variable_data[operands[1]], 1)}
+    elif "*" in operation_type:
+        for operand in operands:
+            result = result * variable_data[operand] if result is not None else variable_data[operand]
+        return {new_variable: result}
+    elif "-" in operation_type:
+        for operand in operands:
+            result = result - variable_data[operand] if result is not None else variable_data[operand]
+        return {new_variable: result}
+    elif "abs" in operation_template:
+        return {new_variable: abs(variable_data[operands[0]])}
+    elif "sqrt" in operation_template:
+        return {new_variable: round(variable_data[operands[0]] ** 0.5, 1)}
+    elif "log" in operation_template:
+        return {new_variable: round(math.log(variable_data[operands[0]]), 1)}
+    # Add more cases for other algebraic operations as needed
+
+
 
 def infer_decomposition(value, template):
     # Decompose based on the provided template

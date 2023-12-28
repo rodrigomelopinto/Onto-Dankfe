@@ -14,6 +14,7 @@
     <!-- Classes -->
     <owl:Class rdf:about="&example;DecompositionOperation"/>
     <owl:Class rdf:about="&example;MappingOperation"/>
+    <owl:Class rdf:about="&example;AlgebraicOperation"/>
     <owl:Class rdf:about="&example;Variable"/>
 
     <!-- Individuals: Decomposition Templates -->
@@ -28,8 +29,16 @@
         <example:hasName rdf:datatype="&xsd;string">LastName</example:hasName>
         <example:hasDecompositionTemplate rdf:datatype="&xsd;string">(?P&lt;FirstName&gt;[^_]+)_(?P&lt;LastName&gt;[^_]+)</example:hasDecompositionTemplate>
     </owl:NamedIndividual>
-    
 
+
+    <!-- Individuals: Algebraic Templates -->
+    <owl:NamedIndividual rdf:about="&example;DivisionAlgebraicTemplate">
+        <rdf:type rdf:resource="&example;AlgebraicOperation"/>
+        <example:hasName rdf:datatype="&xsd;string">Ratio</example:hasName>
+        <example:hasOperationType rdf:datatype="&xsd;string">/</example:hasOperationType>
+        <example:hasOperand rdf:resource="&example;Cases"/>
+        <example:hasOperand rdf:resource="&example;Deaths"/>
+    </owl:NamedIndividual>
     
 
     <!-- Individuals: Mapping Templates -->
@@ -68,9 +77,14 @@
 
 
     <!-- Individuals: Variables -->
-    <owl:NamedIndividual rdf:about="&example;Date">
+    <owl:NamedIndividual rdf:about="&example;Cases">
         <rdf:type rdf:resource="&example;Variable"/>
-        <example:hasOperation rdf:resource="&example;DateDecompositionTemplate"/>
+        <example:hasOperation rdf:resource="&example;DivisionAlgebraicTemplate"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&example;Deaths">
+        <rdf:type rdf:resource="&example;Variable"/>
+        <example:hasOperation rdf:resource="&example;DivisionAlgebraicTemplate"/>
     </owl:NamedIndividual>
 
 </rdf:RDF>
