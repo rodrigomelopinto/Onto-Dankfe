@@ -250,7 +250,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/deaths"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/d"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/deaths"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -260,7 +260,7 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/c"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -273,7 +273,7 @@
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/c"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -293,9 +293,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                 <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
                                                 <swrl:arguments rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/r"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/d"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/c"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/deaths"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
                                                 </swrl:arguments>
                                             </rdf:Description>
                                         </rdf:first>
@@ -315,7 +315,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/r"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -334,7 +334,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/c"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -344,7 +344,7 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/population"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/p"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/population"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -357,7 +357,7 @@
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/p"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/population"/>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -377,9 +377,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                 <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
                                                 <swrl:arguments rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/t"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/c"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/p"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/temp"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/population"/>
                                                 </swrl:arguments>
                                             </rdf:Description>
                                         </rdf:first>
@@ -397,7 +397,7 @@
                                                                 <rdf:rest>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/t"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/temp"/>
                                                                         <rdf:rest>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -448,7 +448,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/first_date"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/fd"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/first_date"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -458,7 +458,7 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_date"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_date"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -469,9 +469,9 @@
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                         <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
                                         <swrl:arguments rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nm"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/fd"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/first_date"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_date"/>
                                         </swrl:arguments>
                                     </rdf:Description>
                                 </rdf:first>
@@ -489,7 +489,7 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nm"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
