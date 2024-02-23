@@ -1,3 +1,4 @@
+import csv
 from rdflib import Graph, URIRef, Literal
 
 # Assuming 'rdf_file.rdf' is the name of your RDF file
@@ -21,12 +22,14 @@ for s, p, o in g.triples((None, URIRef('http://www.w3.org/2003/11/swrl#body'), N
     atom_info = {}
     arguments = {}
     list_builtin = []
+    variables_connection = {}
     atom_info['argument_variables'] = arguments
     for atom in atom_list:
         if (atom, URIRef('http://www.w3.org/2003/11/swrl#classPredicate'), None) in g:
             variable = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#classPredicate'))).split('/')[-1]
             argument = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#argument1'))).split('/')[-1]
-            atom_info['argument_variables'][variable] = argument
+            variables_connection[argument] = variable
+            atom_info['argument_variables'][variable] = variable
         elif (atom, URIRef('http://www.w3.org/2003/11/swrl#builtin'), None) in g:
             builtin = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#builtin'))).split('/')[-1]
             arguments = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#arguments'))).split('/')[-1]
@@ -37,7 +40,10 @@ for s, p, o in g.triples((None, URIRef('http://www.w3.org/2003/11/swrl#body'), N
                 for item in g.items(arg):
                     # If the list item is a resource, print its URI
                     if isinstance(item, URIRef):
-                        list_items[builtin.split('#')[-1]].append(str(item).split('/')[-1])
+                        if str(item).split('/')[-1] in variables_connection:
+                            list_items[builtin.split('#')[-1]].append(variables_connection[str(item).split('/')[-1]])
+                        else:
+                            list_items[builtin.split('#')[-1]].append(str(item).split('/')[-1])
                     # If the list item is a literal, print its value
                     elif isinstance(item, Literal):
                         list_items[builtin.split('#')[-1]].append(str(item))
@@ -64,53 +70,47 @@ for s, p, o in g.triples((None, URIRef('http://www.w3.org/2003/11/swrl#head'), N
     for atom in atom_list:
         if (atom, URIRef('http://www.w3.org/2003/11/swrl#classPredicate'), None) in g:
             variable = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#classPredicate'))).split('/')[-1]
-            argument = next(g.objects(atom, URIRef('http://www.w3.org/2003/11/swrl#argument1'))).split('/')[-1]
-            atom_info[variable] = argument
+            atom_info[variable] = variable
     head_atoms.append(atom_info)
-
-#print(body_atoms)
 
 
 for item in head_atoms:
     key = next(iter(item))  # Extract the key from the dictionary
     swrl_rules[key] = body_atoms.pop(0)  # Assign the corresponding body item and remove it from the list
 
-#print(swrl_rules)
 
-
-
-
-import csv
-
-#def apply_builtin_operation(row, operation, args):
-    # Add more operations as needed
 
 def apply_swrl_rules_to_row(row, swrl_rules):
     intermediate_results = {}
     
     for rule_name, rule in swrl_rules.items():
         operations = rule['builtins']
-        final_operation = operations[-1]  # Last operation is the final operation
+        final_operation = operations[-1]
         
         # Perform intermediate operations
-        for op, args in operations[:-1]:
+        for ops in operations[:-1]:
+            op_type = list(ops.keys())[0]
+            args = ops[op_type]
             arg1, arg2, arg3 = args
             if row[arg2] == '' or row[arg3] == '':
                 intermediate_results[arg1] = None
                 continue
-            if op == 'divide':
+            if op_type == 'divide':
                 try:
                     result = float(row[arg2]) / float(row[arg3])
                 except ZeroDivisionError:
                     result = None
                 intermediate_results[arg1] = result
-            elif op == 'multiply':
+            elif op_type == 'multiply':
                 result = float(row[arg2]) * float(row[arg3])
                 intermediate_results[arg1] = result
     
+        final_op_type = list(final_operation.keys())[0]
+        final_op_args = final_operation[final_op_type]
+        
         # Perform final operation
-        if final_operation[0] == 'multiply':
-            arg1, arg2, arg3 = final_operation[1]
+        if final_op_type == 'multiply':
+            arg1, arg2, arg3 = final_op_args
             if arg2 in intermediate_results and intermediate_results[arg2] is not None:
                 if arg3.isdigit():
                     result = intermediate_results[arg2] * int(arg3)
@@ -142,8 +142,8 @@ def apply_swrl_rules_to_row(row, swrl_rules):
             result = int(row[arg2]) * int(row[arg3])
             row[rule_name] = result
             continue
-        if final_operation[0] == 'divide':
-            arg1, arg2, arg3 = final_operation[1]
+        if final_op_type == 'divide':
+            arg1, arg2, arg3 = final_op_args
             if arg2 in intermediate_results and intermediate_results[arg2] is not None:
                 if arg3.isdigit():
                     try:
@@ -221,21 +221,5 @@ def apply_swrl_rules_to_dataset(csv_file, swrl_rules):
             writer.writerow(row)
 
 
-# Example usage
-swrl_rules_to_apply = {
-    'ratio': {
-        'argument_variables': {'deaths': 'deaths', 'cases': 'cases'},
-        'builtins': [('divide', ('ratio', 'deaths', 'cases'))]
-    }
-}
-
-
-'''swrl_rules_to_apply = {
-    'cases_per_100k': {
-        'argument_variables': {'cases': 'cases', 'popData2019': 'popData2019'},
-        'builtins': [('divide', ('temp', 'cases', 'popData2019')), ('multiply', ('res', 'temp', '100000'))]
-    }
-}'''
-
 # Apply SWRL rules to the dataset
-modified_dataset = apply_swrl_rules_to_dataset('/home/rodrirocki/Thesis/case_study/Oceania_covid_data.csv', swrl_rules_to_apply)
+modified_dataset = apply_swrl_rules_to_dataset('/home/rodrirocki/Thesis/case_study/Oceania_covid_data.csv', swrl_rules)
