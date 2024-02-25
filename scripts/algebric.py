@@ -1,5 +1,6 @@
 import csv
 from rdflib import Graph, URIRef, Literal
+from datetime import datetime
 
 # Assuming 'rdf_file.rdf' is the name of your RDF file
 g = Graph()
@@ -77,6 +78,18 @@ for s, p, o in g.triples((None, URIRef('http://www.w3.org/2003/11/swrl#head'), N
 for item in head_atoms:
     key = next(iter(item))  # Extract the key from the dictionary
     swrl_rules[key] = body_atoms.pop(0)  # Assign the corresponding body item and remove it from the list
+
+
+
+def is_date(string):
+    formats = ["%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y"] #Add more formats if needed
+    for fmt in formats:
+        try:
+            datetime.strptime(string, fmt)
+            return True
+        except ValueError:
+            pass
+    return False
 
 
 
@@ -234,6 +247,13 @@ def apply_swrl_rules_to_row(row, swrl_rules):
                 row[rule_name] = result
                 continue
             #missing the conditions for date type variables
+            #not handling the current_date correctly need to ask about it
+            if is_date(row[arg2]):
+                date1 = datetime.strptime(row[arg2], "%Y-%m-%d")
+                date2 = datetime.strptime(row[arg3], "%Y-%m-%d")
+                result = date1 - date2
+                row[rule_name] = result.months
+                continue
             result = int(row[arg2]) - int(row[arg3])
             row[rule_name] = result
             continue
