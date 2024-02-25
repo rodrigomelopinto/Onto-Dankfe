@@ -104,6 +104,9 @@ def apply_swrl_rules_to_row(row, swrl_rules):
             elif op_type == 'multiply':
                 result = float(row[arg2]) * float(row[arg3])
                 intermediate_results[arg1] = result
+            elif op_type == 'subtract':
+                result = float(row[arg2]) - float(row[arg3])
+                intermediate_results[arg1] = result
     
         final_op_type = list(final_operation.keys())[0]
         final_op_args = final_operation[final_op_type]
@@ -198,6 +201,40 @@ def apply_swrl_rules_to_row(row, swrl_rules):
                 result = int(row[arg2]) / int(row[arg3])
             except ZeroDivisionError:
                 result = None
+            row[rule_name] = result
+            continue
+        if final_op_type == 'subtract':
+            arg1, arg2, arg3 = final_op_args
+            if arg2 in intermediate_results and intermediate_results[arg2] is not None:
+                if arg3.isdigit():
+                    result = intermediate_results[arg2] - int(arg3)
+                else:
+                    result = intermediate_results[arg2] - row[arg3]
+                row[rule_name] = result
+                continue
+            if arg3 in intermediate_results and intermediate_results[arg3] is not None:
+                if arg2.isdigit():
+                    result = int(arg2) - intermediate_results[arg3]
+                else:
+                    result = row[arg2] - intermediate_results[arg3]
+                row[rule_name] = result
+                continue
+            if arg2 in intermediate_results and intermediate_results[arg2] is None:
+                row[rule_name] = None
+                continue
+            if arg3 in intermediate_results and intermediate_results[arg3] is None:
+                row[rule_name] = None
+                continue
+            if arg2.isdigit():
+                result = int(arg2) - int(row[arg3])
+                row[rule_name] = result
+                continue
+            if arg3.isdigit():
+                result = int(row[arg2]) - int(arg3)
+                row[rule_name] = result
+                continue
+            #missing the conditions for date type variables
+            result = int(row[arg2]) - int(row[arg3])
             row[rule_name] = result
             continue
         # Add conditions for other final operations if needed
