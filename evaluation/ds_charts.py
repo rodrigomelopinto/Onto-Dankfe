@@ -10,7 +10,7 @@ from matplotlib.dates import  AutoDateLocator, AutoDateFormatter
 import matplotlib.font_manager as fm
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import export_graphviz
-from sklearn.metrics import confusion_matrix, plot_roc_curve
+from sklearn.metrics import confusion_matrix
 
 import config as cfg
 
@@ -186,7 +186,7 @@ def plot_confusion_matrix(cnf_matrix: ndarray, classes_names: ndarray, ax: Axes 
         ax.text(j, i, format(cm[i, j], fmt), color='w', horizontalalignment="center")
 
 
-def plot_roc_chart(models: dict, tstX: ndarray, tstY: ndarray, ax: Axes = None, target: str = 'class'):
+'''def plot_roc_chart(models: dict, tstX: ndarray, tstY: ndarray, ax: Axes = None, target: str = 'class'):
     if ax is None:
         ax = gca()
     ax.set_xlim(0.0, 1.0)
@@ -196,7 +196,7 @@ def plot_roc_chart(models: dict, tstX: ndarray, tstY: ndarray, ax: Axes = None, 
     ax.plot([0, 1], [0, 1], color='navy', label='random', linewidth=1, linestyle='--',  marker='')
     for clf in models.keys():
         plot_roc_curve(models[clf], tstX, tstY, ax=ax, marker='', linewidth=1)
-    ax.legend(loc="lower right")
+    ax.legend(loc="lower right")'''
 
 
 def plot_tree(tree, variables: list, labels: list, out_filename: str):
