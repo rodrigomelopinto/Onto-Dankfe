@@ -7,6 +7,7 @@ g = Graph()
 g.parse('/home/rodrirocki/Thesis/ontologies/covid.rdf')
 
 swrl_rules = {}
+create_current_date = 0
 
 body_atoms = []
 
@@ -79,6 +80,19 @@ for item in head_atoms:
     key = next(iter(item))  # Extract the key from the dictionary
     swrl_rules[key] = body_atoms.pop(0)  # Assign the corresponding body item and remove it from the list
 
+def is_current_date_present(structure):
+    for key, value in structure.items():
+        if isinstance(value, dict):
+            if is_current_date_present(value):
+                return True
+        elif isinstance(value, list):
+            for item in value:
+                if isinstance(item, dict):
+                    if is_current_date_present(item):
+                        return True
+        elif key == 'current_date':
+            return True
+    return False
 
 
 def is_date(string):
@@ -249,10 +263,17 @@ def apply_swrl_rules_to_row(row, swrl_rules):
             #missing the conditions for date type variables
             #not handling the current_date correctly need to ask about it
             if is_date(row[arg2]):
-                date1 = datetime.strptime(row[arg2], "%Y-%m-%d")
-                date2 = datetime.strptime(row[arg3], "%Y-%m-%d")
-                result = date1 - date2
-                row[rule_name] = result.months
+                if arg3 == 'current_date':
+                    create_current_date = 1
+                    date1 = datetime.strptime(row[arg2], "%d/%m/%Y")
+                    date2 = datetime.now()
+                    result = (date2.year - date1.year) * 12 + date2.month - date1.month
+                    row[rule_name] = result
+                    continue
+                date1 = datetime.strptime(row[arg2], "%d/%m/%Y")
+                date2 = datetime.strptime(row[arg3], "%d/%m/%Y")
+                result = (date2.year - date1.year) * 12 + date2.month - date1.month
+                row[rule_name] = result
                 continue
             result = int(row[arg2]) - int(row[arg3])
             row[rule_name] = result
@@ -268,6 +289,8 @@ def apply_swrl_rules_to_dataset(csv_file, swrl_rules):
         reader = csv.DictReader(csvfile)
         for row in reader:
             modified_row = apply_swrl_rules_to_row(row, swrl_rules)
+            if is_current_date_present(swrl_rules):
+                modified_row['current_date'] = datetime.now().strftime("%d/%m/%Y")
             modified_dataset.append(modified_row)
     with open(csv_file, 'w', newline='') as csvfile:
         fieldnames = modified_dataset[0].keys()
