@@ -61,6 +61,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasSeason"/>
+    
+
+
     <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasYear -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasYear"/>
@@ -75,6 +81,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Season"/>
     
 
 
@@ -114,6 +126,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dateRep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dateRep"/>
+    
+
+
     <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/deaths -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/deaths"/>
@@ -141,6 +159,35 @@
     <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nm"/>
     
 
 
@@ -189,6 +236,22 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasSeason"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dateRep"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Season"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Season"/>
+        <DASE_RULE>Mapping_sesason_current_date___dateRep(?x) ^ hasSeason(?x, ?y) -&gt; Season(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
                         <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/hasYear"/>
                     </rdf:Description>
                 </owl:onProperty>
@@ -229,6 +292,11 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/res">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
