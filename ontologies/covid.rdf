@@ -213,7 +213,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_day"/>
-        <DASE_RULE>Decomposition_day_current_date___current_date(?x) ^ hasDay(?x, ?y) -&gt; current_day(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_day_current_date___dateRep(?x) ^ hasDay(?x, ?y) -&gt; Day(?y)___</DASE_RULE>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource>
@@ -229,7 +229,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_month"/>
-        <DASE_RULE>Decomposition_month_current_date___current_date(?x) ^ hasMonth(?x, ?y)  -&gt; current_month(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_month_current_date___dateRep(?x) ^ hasMonth(?x, ?y)  -&gt; Month(?y)___</DASE_RULE>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource>
@@ -261,7 +261,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_year"/>
-        <DASE_RULE>Decomposition_year_current_date___current_date(?x) ^ hasYear(?x, ?y) -&gt; current_year(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_year_current_date___dateRep(?x) ^ hasYear(?x, ?y) -&gt; Year(?y)___</DASE_RULE>
     </owl:Axiom>
     
 
