@@ -73,6 +73,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -144,6 +150,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/geoId -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/geoId"/>
+    
+
+
     <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months"/>
@@ -159,6 +171,12 @@
     <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_total -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_total"/>
     
 
 
@@ -201,6 +219,30 @@
 
     <owl:Axiom>
         <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/geoId"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_total"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_total"/>
+        <DASE_RULE>Aggregation_sum_total___cases(?c) ^ sum(?c,?s) ^ geoId(?g) -&gt; sum_total(?s)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -213,7 +255,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_day"/>
-        <DASE_RULE>Decomposition_day_current_date___dateRep(?x) ^ hasDay(?x, ?y) -&gt; Day(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_day_current_date___current_date(?x) ^ hasDay(?x, ?y) -&gt; current_day(?y)___</DASE_RULE>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource>
@@ -229,7 +271,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_month"/>
-        <DASE_RULE>Decomposition_month_current_date___dateRep(?x) ^ hasMonth(?x, ?y)  -&gt; Month(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_month_current_date___current_date(?x) ^ hasMonth(?x, ?y)  -&gt; current_month(?y)___</DASE_RULE>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource>
@@ -261,7 +303,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_year"/>
-        <DASE_RULE>Decomposition_year_current_date___dateRep(?x) ^ hasYear(?x, ?y) -&gt; Year(?y)___</DASE_RULE>
+        <DASE_RULE>Decomposition_year_current_date___current_date(?x) ^ hasYear(?x, ?y) -&gt; current_year(?y)___</DASE_RULE>
     </owl:Axiom>
     
 
@@ -295,8 +337,8 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep"/>
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cd"/>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
