@@ -1,0 +1,35 @@
+{
+    "entities": [
+        {
+        "name": "name of entity (e.g. feature name)",
+        "title": "A nicer human readable label or title for the entity", // optional
+        "type": "A string specifying the type",
+        "format": "A string specifying a format",
+        "description": "A description for the entity",
+        "observed": "if the variable is observed or generated",
+        "order" : "specific order of the entity regarding other entities with the same name",
+        "constraints": [{
+            "required": bool, // por exemplo para primary keys
+            "unique": bool,
+            //"minLength": integer,
+            //"maxLength": integer,
+            "minimum": any,
+            "maximum": any,
+            "pattern": string,
+            "enum": array,
+            }]
+        }
+      // ... more entities
+    ],
+    "relations": [
+        {
+            "name": "name of the relation",
+            "type": "type of the relation",
+            "operations": "operations performed to turn input into output",
+            "inputs" : [],
+            "output": "entity to be created",
+            "constraint" : "possible constraint on the generation of data"
+        }
+    ]
+    // ... more relations
+  }

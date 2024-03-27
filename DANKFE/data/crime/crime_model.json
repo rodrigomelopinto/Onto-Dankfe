@@ -1,0 +1,166 @@
+{
+    "entities": [
+      {
+        "name": "current_date",
+        "type": "datetime",
+        "description": "Date of reporting",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "description": "Description of the crime",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "inside",
+        "type": "bool",
+        "description": "Crime was commited inside",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "weapon",
+        "type": "string",
+        "description": "Which weapon was used",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "post",
+        "type": "int",
+        "description": "Number of the post",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "district",
+        "type": "string",
+        "description": "District in Baltimore",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "neighborhood",
+        "type": "string",
+        "description": "Neighborhood in Baltimore",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "lat",
+        "type": "float",
+        "description": "Latitude of crime location",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "lon",
+        "type": "float",
+        "description": "Longitude of crime location",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "common_dist",
+        "type": "int",
+        "description": "Whether crime is common for that district                                                   ",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      }
+    ],
+    "relations": [
+      {
+        "name": "dist_center",
+        "type": "float",
+        "operations": ["getDistanceBaltimore"],
+        "inputs": ["lat","lon"],
+        "output": "dist_center",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "day_period",
+        "type": "int",
+        "operations": ["getDayPeriod"],
+        "inputs": ["current_date"],
+        "output": "day_period",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "crime_type",
+        "type": "int",
+        "operations": ["getCrimeType"],
+        "inputs": ["description"],
+        "output": "crime_type",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "weapon",
+        "type": "int",
+        "operations": ["getWeapon"],
+        "inputs": ["weapon"],
+        "output": "weapon",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      // {
+      //   "name": "neighborhood_lat",
+      //   "type": "int",
+      //   "operations": ["getAverage"],
+      //   "inputs": ["lat"],
+      //   "output": "neighborhood_lat",
+      //   "groupby": "neighborhood",
+      //   "needsRows" : "all",
+      //   "constraint": ""
+      // },
+      // {
+      //   "name": "neighborhood_lon",
+      //   "type": "int",
+      //   "operations": ["getAverage"],
+      //   "inputs": ["lon"],
+      //   "output": "neighborhood_lon",
+      //   "groupby": "neighborhood",
+      //   "needsRows" : "all",
+      //   "constraint": ""
+      // },
+      // {
+      //   "name": "district_lat",
+      //   "type": "int",
+      //   "operations": ["getAverage"],
+      //   "inputs": ["neighborhood_lat"],
+      //   "output": "district_lat",
+      //   "groupby": "district",
+      //   "needsRows" : "all",
+      //   "constraint": ""
+      // },
+      // {
+      //   "name": "district_lon",
+      //   "type": "int",
+      //   "operations": ["getAverage"],
+      //   "inputs": ["neighborhood_lon"],
+      //   "output": "district_lon",
+      //   "groupby": "district",
+      //   "needsRows" : "all",
+      //   "constraint": ""
+      // }      
+      ]
+  }

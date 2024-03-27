@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "name": "current_date",
+      "type": "datetime",
+      "description": "Date of reporting",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "cases",
+      "type": "int",
+      "description": "Number of newly reported cases",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "deaths",
+      "type": "int",
+      "description": "Number of newly reported deaths",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "description": "2-letter code",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "population",
+      "type": "int",
+      "description": "Eurostat 2020 population data",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "first_date",
+      "type": "datetime",
+      "description": "Date of the first case",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "high_risk_2w",
+      "type": "bool",
+      "description": "High covid risk in 2 weeks",
+      "order": 0,
+      "observed": true,
+      "constraints" : []
+    }
+  ],
+  "relations": [
+    {
+      "name": "holiday",
+      "type": "int",
+      "operations": ["getHoliday"],
+      "inputs": ["current_date","country"],
+      "output": "holiday",
+      "groupby": "",
+      "needsRows" : 0,
+      "constraint": ""
+    },
+    {
+      "name": "nr_months",
+      "type": "int",
+      "operations": ["datediff","months"],
+      "inputs": ["current_date","first_date"],
+      "output": "nr_months",
+      "groupby": "",
+      "needsRows" : 0,
+      "constraint": ""
+    },
+    {
+      "name": "ratio",
+      "type": "float",
+      "operations": ["/"],
+      "inputs": ["cases","deaths"],
+      "output": "ratio",
+      "groupby": "",
+      "needsRows" : 0,
+      "constraint": "deaths != 0"
+    },
+    {
+      "name": "cases_100k",
+      "type": "float",
+      "operations": ["getCases100k"],
+      "inputs": ["cases","population"],
+      "output": "cases_100k",
+      "groupby": "",
+      "needsRows" : 0,
+      "constraint": ""
+    },
+    {
+      "name": "current_risk",
+      "type": "bool",
+      "operations": ["getCurrentRisk"],
+      "inputs": ["cases_100k"],
+      "output": "current_risk",
+      "groupby": "",
+      "needsRows" : 0,
+      "constraint": ""
+    },
+    // {
+    //   "name": "avg_2weeks",
+    //   "type": "float",
+    //   "operations": ["generateAvg_2weeks"],
+    //   "inputs": ["current_date","cases"],
+    //   "output": "avg_2weeks",
+    //   "groupby": "country",
+    //   "needsRows" : 15,
+    //   "constraint": ""
+    // },
+    // {
+    //   "name": "avg_2w_100k",
+    //   "type": "float",
+    //   "operations": ["generateAvg_2w_100k"],
+    //   "inputs": ["avg_2weeks","population"],
+    //   "output": "avg_2w_100k",
+    //   "groupby": "country",
+    //   "needsRows" : 0,
+    //   "constraint": ""
+    // },  
+    // {
+    //   "name": "sum_2weeks",
+    //   "type": "float",
+    //   "operations": ["generateSum_2weeks"],
+    //   "inputs": ["current_date","cases"],
+    //   "output": "sum_2weeks",
+    //   "groupby": "country",
+    //   "needsRows" : 15,
+    //   "constraint": ""
+    // },
+    // {
+    //   "name": "sum_2w_100k",
+    //   "type": "float",
+    //   "operations": ["generateSum_2w_100k"],
+    //   "inputs": ["sum_2weeks","population"],
+    //   "output": "sum_2w_100k",
+    //   "groupby": "",
+    //   "needsRows" : 0,
+    //   "constraint": ""
+    // }
+    ]
+}

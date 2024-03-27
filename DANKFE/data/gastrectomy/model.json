@@ -1,0 +1,325 @@
+{
+  "entities": [
+    {
+      "name": "id",
+      "type": "integer",
+      "description": "Identifier",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : [
+        {
+          "unique" : true
+        }]
+    }
+    ,
+    {
+      "name": "genero",
+      "type": "integer",
+      "description": "Patient gender",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    }
+    ,
+    {
+      "name": "idade",
+      "type": "integer",
+      "description": "Patient age",
+      "order" : 0,
+      "observed" : false,
+      "constraints" : []
+    }
+    ,
+    {
+      "name": "dt_nasc",
+      "type": "datetime",
+      "description": "Patient Birth date",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "dt_cirurgia",
+      "type": "datetime",
+      "description": "Patient Surgery date",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "local_1",
+      "type": "boolean",
+      "description": "Localization - fundo e cardia",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "local_2",
+      "type": "boolean",
+      "description": "Localization - corpo",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "local_3",
+      "type": "boolean",
+      "description": "Localization - antra",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "local_coto",
+      "type": "boolean",
+      "description": "Localization - coto",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "histologia",
+      "type": "integer",
+      "description": "Where histology was performed",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "gastrectomia",
+      "type": "integer",
+      "description": "Type of gastrectomy - total or subtotal",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "gg_positivos",
+      "type": "integer",
+      "description": "Number of positive ganglia",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "gg_negativos",
+      "type": "integer",
+      "description": "Number of negative ganglia",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "gg_total",
+      "type": "integer",
+      "description": "Number of total ganglia",
+      "order" : 0,
+      "observed" : false,
+      "constraints" : []
+    },
+    {
+      "name": "estadio_8ed",
+      "type": "integer",
+      "description": "Cancer stage - 8th edition",
+      "order" : 0,
+      "observed" : false,
+      "constraints" : []
+    },
+    {
+      "name": "t_8ed",
+      "type": "integer",
+      "description": "Tumor size - 8th edition",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "n_8ed",
+      "type": "integer",
+      "description": "Number of positive ganglia - 8th edition",
+      "order" : 0,
+      "observed" : false,
+      "constraints" : []
+    },
+    {
+      "name": "terapia_neoadj",
+      "type": "integer",
+      "description": "Neoadjuvant therapy",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "terapia_adj",
+      "type": "integer",
+      "description": "Adjuvant therapy",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "quimio",
+      "type": "integer",
+      "description": "Chemotherapy",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_ossea",
+      "type": "boolean",
+      "description": "Recidive - ossea",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_hepatica",
+      "type": "boolean",
+      "description": "Recidive - hepatica",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_cerebral",
+      "type": "boolean",
+      "description": "Recidive - cerebral",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_peritoneal",
+      "type": "boolean",
+      "description": "Recidive - peritoneal",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_pulmonar",
+      "type": "boolean",
+      "description": "Recidive - pulmonar",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_ovarica",
+      "type": "boolean",
+      "description": "Recidive - ovarica",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_carcinomatose",
+      "type": "boolean",
+      "description": "Recidive - carcinomatose",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_local",
+      "type": "boolean",
+      "description": "Recidive - local",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva_meningea",
+      "type": "boolean",
+      "description": "Recidive - meningea",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "recidiva",
+      "type": "integer",
+      "description": "Recidive",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "dt_obs_morte",
+      "type": "datetime",
+      "description": "Last observation / death date",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    },
+    {
+      "name": "ratio",
+      "type": "float",
+      "description": "Total / positive ganglia",
+      "order" : 0,
+      "observed" : false,
+      "constraints" : []
+    },
+    {
+      "name": "sobrevivencia",
+      "type": "integer",
+      "description": "Patient survival",
+      "order" : 0,
+      "observed" : true,
+      "constraints" : []
+    }
+  ],
+  "relations": [
+    {
+      "name": "gg_total",
+      "type": "",
+      "operations": ["+"],
+      "inputs": ["gg_positivos", "gg_negativos"],
+      "output": "gg_total",
+      "constraint": ""
+    },
+    {
+      "name": "percentage",
+      "type": "",
+      "operations": ["/"],
+      "inputs": ["gg_positivos", "gg_total"],
+      "output": "percentage",
+      "constraint": "divisible by 0"
+    },
+    {
+      "name": "ratio",
+      "type": "",
+      "operations": ["/"],
+      "inputs": ["gg_total", "gg_positivos"],
+      "output": "ratio",
+      "constraint": "divisible by 0"
+    },
+    {
+      "name": "idade",
+      "type": "",
+      "operations": ["datediff","years"],
+      "inputs": ["dt_cirurgia", "dt_nasc"],
+      "output": "idade",
+      "constraint": ""
+    },
+    {
+      "name": "estadio_8ed",
+      "type": "",
+      "operations": ["generateEstadio_8ed"],
+      "inputs": ["t_8ed", "n_8ed"],
+      "output": "estadio_8ed",
+      "constraint": ""
+    },
+    {
+      "name": "n_8ed",
+      "type": "",
+      "operations": ["generateN_8ed"],
+      "inputs": ["gg_positivos"],
+      "output": "n_8ed",
+      "constraint": ""
+    }
+    ]
+  
+}

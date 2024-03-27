@@ -1,0 +1,132 @@
+{
+    "entities": [
+      {
+        "name": "current_date",
+        "type": "datetime",
+        "description": "Date of reporting",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "temperature",
+        "type": "float",
+        "description": "Temperature",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "uncertainty",
+        "type": "float",
+        "description": "Uncertainty in temperature",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "city",
+        "type": "string",
+        "description": "City",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "country",
+        "type": "string",
+        "description": "Country",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "lat",
+        "type": "float",
+        "description": "City Latitude",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "lon",
+        "type": "float",
+        "description": "City Longitude",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      }
+    ],
+    "relations": [
+      {
+        "name": "country_lat",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["lat"],
+        "output": "country_lat",
+        "groupby": "country",
+        "needsRows" : "all",
+        "constraint": ""
+      },
+      {
+        "name": "country_lon",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["lon"],
+        "output": "country_lon",
+        "groupby": "country",
+        "needsRows" : "all",
+        "constraint": ""
+      },
+      {
+        "name": "last_year_temp",
+        "type": "float",
+        "operations": ["getLastYearTemp"],
+        "inputs": ["current_date","temperature"],
+        "output": "last_year_temp",
+        "groupby": "city",
+        "needsRows" : -13,
+        "constraint": ""
+      },
+      {
+        "name": "one_year_diff",
+        "type": "float",
+        "operations": ["-"],
+        "inputs": ["temperature","last_year_temp"],
+        "output": "one_year_diff",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "avg_temp_year",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["temperature"],
+        "output": "avg_temp_year",
+        "groupby": "city",
+        "needsRows" : 12,
+        "constraint": ""
+      },
+      {
+        "name": "average_diff",
+        "type": "float",
+        "operations": ["-"],
+        "inputs": ["temperature","avg_temp_year"],
+        "output": "average_diff",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "average_diff_pos",
+        "type": "bool",
+        "operations": ["getAverageDiffPos"],
+        "inputs": ["average_diff"],
+        "output": "average_diff_pos",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      }
+      ]
+  }

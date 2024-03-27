@@ -1,0 +1,8 @@
+{
+    "checkMissingValues" : "auto",
+    "checkScaling" : "zscore",
+    "checkBalancing" : true,
+    "generateDates" : true,
+    "generateFiveSummary" : [],
+    "groupby": []
+}

@@ -1,0 +1,107 @@
+{
+  "dates":
+  [{
+    "name": "day",
+    "type": "int",
+    "operations": ["getDay"],
+    "inputs": [],
+    "output": "day",
+    "groupby": "",
+    "needsRows" : 0,
+    "constraint": ""
+  },
+  {
+    "name": "month",
+    "type": "int",
+    "operations": ["getMonth"],
+    "inputs": [],
+    "output": "month",
+    "groupby": "",
+    "needsRows" : 0,
+    "constraint": ""
+  },
+  {
+    "name": "year",
+    "type": "int",
+    "operations": ["getYear"],
+    "inputs": [],
+    "output": "year",
+    "groupby": "",
+    "needsRows" : 0,
+    "constraint": ""
+  },
+  {
+    "name": "season",
+    "type": "str",
+    "operations": ["getSeason"],
+    "inputs": [],
+    "output": "season",
+    "groupby": "",
+    "needsRows" : 0,
+    "constraint": ""
+  },
+  {
+    "name": "weekday",
+    "type": "int",
+    "operations": ["getWeekday"],
+    "inputs": [],
+    "output": "weekday",
+    "groupby": "",
+    "needsRows" : 0,
+    "constraint": ""
+  }
+],
+"five_summary":
+  [
+    {
+      "name": "mean",
+      "type": "int",
+      "operations": ["getAverage"],
+      "inputs": [],
+      "output": "mean",
+      "groupby": "",
+      "needsRows" : "all",
+      "constraint": ""
+    },
+    {
+      "name": "std",
+      "type": "int",
+      "operations": ["getStd"],
+      "inputs": [],
+      "output": "std",
+      "groupby": "",
+      "needsRows" : "all",
+      "constraint": ""
+    },
+    {
+      "name": "median",
+      "type": "int",
+      "operations": ["getMedian"],
+      "inputs": [],
+      "output": "median",
+      "groupby": "",
+      "needsRows" : "all",
+      "constraint": ""
+    },
+    {
+      "name": "max",
+      "type": "int",
+      "operations": ["getMax"],
+      "inputs": [],
+      "output": "max",
+      "groupby": "",
+      "needsRows" : "all",
+      "constraint": ""
+    },
+    {
+      "name": "min",
+      "type": "int",
+      "operations": ["getMin"],
+      "inputs": [],
+      "output": "min",
+      "groupby": "",
+      "needsRows" : "all",
+      "constraint": ""
+    } 
+  ]
+}

@@ -1,0 +1,518 @@
+{
+    "entities": [
+      {
+        "name": "current_date",
+        "type": "datetime",
+        "description": "Date of reporting",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "ALARM",
+        "type": "bool",
+        "description": "Risk of low quality air",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "CO_Mean",
+        "type": "float",
+        "description": "CO Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "CO_Min",
+        "type": "float",
+        "description": "CO Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "CO_Max",
+        "type": "float",
+        "description": "CO Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "CO_Std",
+        "type": "float",
+        "description": "CO Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "NO2_Mean",
+        "type": "float",
+        "description": "NO2 Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "NO2_Min",
+        "type": "float",
+        "description": "NO2 Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "NO2_Max",
+        "type": "float",
+        "description": "NO2 Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "NO2_Std",
+        "type": "float",
+        "description": "NO2 Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "O3_Mean",
+        "type": "float",
+        "description": "O3 Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "O3_Min",
+        "type": "float",
+        "description": "O3 Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "O3_Max",
+        "type": "float",
+        "description": "O3 Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "O3_Std",
+        "type": "float",
+        "description": "O3 Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "PM2.5_Mean",
+        "type": "float",
+        "description": "PM2.5 Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "PM2.5_Min",
+        "type": "float",
+        "description": "PM2.5 Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "PM2.5_Max",
+        "type": "float",
+        "description": "PM2.5 Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "PM2.5_Std",
+        "type": "float",
+        "description": "PM2.5 Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "PM10_Mean",
+        "type": "float",
+        "description": "PM10 Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "PM10_Min",
+        "type": "float",
+        "description": "PM10 Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "PM10_Max",
+        "type": "float",
+        "description": "PM10 Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "PM10_Std",
+        "type": "float",
+        "description": "PM10 Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "SO2_Mean",
+        "type": "float",
+        "description": "SO2 Mean",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "SO2_Min",
+        "type": "float",
+        "description": "SO2 Min",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "SO2_Max",
+        "type": "float",
+        "description": "SO2 Max",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "SO2_Std",
+        "type": "float",
+        "description": "SO2 Std",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "Distance",
+        "type": "float",
+        "description": "Distance to province center",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "Distance_Prov",
+        "type": "float",
+        "description": "Distance from province center to capital",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      },
+      {
+        "name": "GbCity",
+        "type": "int",
+        "description": "City Code",
+        "order": 0,
+        "observed": true,
+        "constraints" : []
+      }
+    ],
+    "relations": [
+      {
+        "name": "CO_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["CO_Mean"],
+        "output": "CO_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "CO_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["CO_Mean"],
+        "output": "CO_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "CO_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["CO_Mean"],
+        "output": "CO_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "CO_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["CO_Mean"],
+        "output": "CO_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "NO2_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["NO2_Mean"],
+        "output": "NO2_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "NO2_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["NO2_Mean"],
+        "output": "NO2_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "NO2_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["NO2_Mean"],
+        "output": "NO2_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "NO2_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["NO2_Mean"],
+        "output": "NO2_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "O3_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["O3_Mean"],
+        "output": "O3_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "O3_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["O3_Mean"],
+        "output": "O3_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "O3_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["O3_Mean"],
+        "output": "O3_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "O3_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["O3_Mean"],
+        "output": "O3_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM2.5_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["PM2.5_Mean"],
+        "output": "PM2.5_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM2.5_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["PM2.5_Mean"],
+        "output": "PM2.5_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM2.5_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["PM2.5_Mean"],
+        "output": "PM2.5_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM2.5_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["PM2.5_Mean"],
+        "output": "PM2.5_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM10_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["PM10_Mean"],
+        "output": "PM10_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM10_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["PM10_Mean"],
+        "output": "PM10_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM10_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["PM10_Mean"],
+        "output": "PM10_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM10_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["PM10_Mean"],
+        "output": "PM10_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "SO2_Mean_week_avg",
+        "type": "float",
+        "operations": ["getAverage"],
+        "inputs": ["SO2_Mean"],
+        "output": "SO2_Mean_week_avg",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "SO2_Mean_week_max",
+        "type": "float",
+        "operations": ["getMax"],
+        "inputs": ["SO2_Mean"],
+        "output": "SO2_Mean_week_max",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "SO2_Mean_week_min",
+        "type": "float",
+        "operations": ["getMin"],
+        "inputs": ["SO2_Mean"],
+        "output": "SO2_Mean_week_min",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "SO2_Mean_week_std",
+        "type": "float",
+        "operations": ["getStd"],
+        "inputs": ["SO2_Mean"],
+        "output": "SO2_Mean_week_std",
+        "groupby": "GbCity",
+        "needsRows" : 7,
+        "constraint": ""
+      },
+      {
+        "name": "PM25_safe",
+        "type": "bool",
+        "operations": ["generatePM25_safe"],
+        "inputs": ["PM2.5_Mean"],
+        "output": "PM2.5_safe",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "PM10_safe",
+        "type": "bool",
+        "operations": ["generatePM10_safe"],
+        "inputs": ["PM10_Mean"],
+        "output": "PM10_safe",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "SO2_safe",
+        "type": "bool",
+        "operations": ["generateSO2_safe"],
+        "inputs": ["SO2_Mean"],
+        "output": "SO2_safe",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "PP_Mean",
+        "type": "float",
+        "operations": ["+"],
+        "inputs": ["PM2.5_Mean","PM10_Mean"],
+        "output": "PP_Mean",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      }
+      ]
+  }

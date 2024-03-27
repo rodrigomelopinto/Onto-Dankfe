@@ -1,0 +1,178 @@
+{
+    "entities": [
+      {
+        "name": "current_date",
+        "type": "datetime",
+        "description": "Date of reporting",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "demand",
+        "type": "int",
+        "description": "UK Energy Demand in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "frequency",
+        "type": "float",
+        "description": "UK Grid Frequency in Hz",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "coal",
+        "type": "int",
+        "description": "Coal Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "nuclear",
+        "type": "int",
+        "description": "Coal Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "ccgt",
+        "type": "int",
+        "description": "Combined Cycle Gas Turbines Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "wind",
+        "type": "int",
+        "description": "Wind Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "pumped",
+        "type": "int",
+        "description": "Pumped Energy Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "hydro",
+        "type": "int",
+        "description": "Hydroeletric Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "biomass",
+        "type": "int",
+        "description": "Biomass Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "oil",
+        "type": "int",
+        "description": "Oil Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "solar",
+        "type": "int",
+        "description": "Solar Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      },
+      {
+        "name": "ocgt",
+        "type": "int",
+        "description": "Combined Cycle Gas Turbines Generation in MW",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      }, 
+      {
+        "name": "prod_vs_avg",
+        "type": "int",
+        "description": "Energy production vs hourly average",
+        "order" : 0,
+        "observed" : true,
+        "constraints" : []
+      }    
+    ],
+    "relations": [
+      {
+        "name": "total_production",
+        "type": "int",
+        "operations": ["+"],
+        "inputs": ["coal","nuclear","ccgt","wind","pumped","hydro","biomass","oil","solar","ocgt"],
+        "output": "total_production",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "net_energy",
+        "type": "int",
+        "operations": ["-"],
+        "inputs": ["total_production","demand"],
+        "output": "net_energy",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      // {
+      //   "name": "hour_prod",
+      //   "type": "float",
+      //   "operations": ["getAverage"],
+      //   "inputs": ["total_production"],
+      //   "output": "hour_prod",
+      //   "groupby": "year",
+      //   "needsRows" : 12,
+      //   "constraint": ""
+      // },
+      {
+        "name": "renewable",
+        "type": "int",
+        "operations": ["+"],
+        "inputs": ["wind","pumped","hydro","biomass","solar"],
+        "output": "renewable",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      },
+      {
+        "name": "renewable_percentage",
+        "type": "float",
+        "operations": ["/"],
+        "inputs": ["renewable","total_production"],
+        "output": "renewable_percentage",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": "total_production != 0"
+      },
+      {
+        "name": "energy_price",
+        "type": "int",
+        "operations": ["getEnergyPrice"],
+        "inputs": ["current_date"],
+        "output": "energy_price",
+        "groupby": "",
+        "needsRows" : 0,
+        "constraint": ""
+      }
+      ]
+  }
