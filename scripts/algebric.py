@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Assuming 'rdf_file.rdf' is the name of your RDF file
 g = Graph()
-g.parse('/home/rodrirocki/Thesis/ontologies/covid.rdf')
+g.parse('/home/rodrirocki/Thesis/ontologies/covid_model.rdf')
 
 swrl_rules = {}
 create_current_date = 0
@@ -79,6 +79,15 @@ for s, p, o in g.triples((None, URIRef('http://www.w3.org/2003/11/swrl#head'), N
 for item in head_atoms:
     key = next(iter(item))  # Extract the key from the dictionary
     swrl_rules[key] = body_atoms.pop(0)  # Assign the corresponding body item and remove it from the list
+
+keys_to_delete = [key for key in swrl_rules if key.startswith('Composition')]
+for key in keys_to_delete:
+    del swrl_rules[key]
+
+algebric_rules = {}
+for key, value in swrl_rules.items():
+    new_key = key.split('_', 1)[1]  # Split on the first occurrence of '_' and take the second part
+    algebric_rules[new_key] = value
 
 def is_current_date_present(structure):
     for key, value in structure.items():
@@ -302,4 +311,4 @@ def apply_swrl_rules_to_dataset(csv_file, swrl_rules):
 
 
 # Apply SWRL rules to the dataset
-modified_dataset = apply_swrl_rules_to_dataset('/home/rodrirocki/Thesis/case_study/Oceania_covid_data.csv', swrl_rules)
+modified_dataset = apply_swrl_rules_to_dataset('/home/rodrirocki/Thesis/case_study/Oceania_covid_data.csv', algebric_rules)

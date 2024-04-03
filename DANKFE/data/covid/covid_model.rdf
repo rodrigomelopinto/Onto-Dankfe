@@ -574,7 +574,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nr_months"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Algebric_nr_months"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/nm"/>
                     </rdf:Description>
                 </rdf:first>
@@ -636,7 +636,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_100k"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Composition_sum_100k"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sa"/>
                     </rdf:Description>
                 </rdf:first>
@@ -698,7 +698,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/avg_100k"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Composition_avg_100k"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/av"/>
                     </rdf:Description>
                 </rdf:first>
@@ -758,7 +758,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/ratio"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Algebric_ratio"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/r"/>
                     </rdf:Description>
                 </rdf:first>
@@ -848,7 +848,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cases_per_100k"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Algebric_cases_per_100k"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/res"/>
                     </rdf:Description>
                 </rdf:first>
@@ -904,7 +904,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/current_risk"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/Composition_current_risk"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/cr"/>
                     </rdf:Description>
                 </rdf:first>
