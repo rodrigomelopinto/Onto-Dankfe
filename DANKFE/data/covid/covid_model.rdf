@@ -410,7 +410,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/popData2019"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/population"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/p"/>
                     </rdf:Description>
                 </rdf:first>
@@ -500,7 +500,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dateRep"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/first_date"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/dRep"/>
                     </rdf:Description>
                 </rdf:first>
