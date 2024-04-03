@@ -239,7 +239,7 @@
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/1/covid/sum_total"/>
-        <DASE_RULE>Aggregation_sum_total___cases(?c) ^ sum(?c,?s) ^ geoId(?g) -&gt; sum_total(?s)___</DASE_RULE>
+        <DASE_RULE>Aggregation_sum_total___cases(?c) ^ sum(?c,?s) ^ country(?g) -&gt; sum_total(?s)___</DASE_RULE>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource>
