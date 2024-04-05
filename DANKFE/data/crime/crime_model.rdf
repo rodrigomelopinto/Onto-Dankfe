@@ -295,22 +295,6 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasCrimeType"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#description"/>
-                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type"/>
-            </owl:Restriction>
-        </owl:annotatedSource>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type"/>
-        <DASE_RULE>Decomposition_crime_type___description(?x) ^ hasCrimeType(?x,?y) -&gt; crime_type(?y)___</DASE_RULE>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
                         <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDay"/>
                     </rdf:Description>
                 </owl:onProperty>
@@ -375,22 +359,6 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasWeapon"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
-                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
-            </owl:Restriction>
-        </owl:annotatedSource>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
-        <DASE_RULE>Decomposition_weapon___weapon(?x) ^ hasWeapon(?x,?y) -&gt; weapon(?y)___</DASE_RULE>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
                         <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasYear"/>
                     </rdf:Description>
                 </owl:onProperty>
@@ -442,7 +410,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lat"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/lat"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/x"/>
                     </rdf:Description>
                 </rdf:first>
@@ -452,7 +420,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lon"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/lon"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/y"/>
                             </rdf:Description>
                         </rdf:first>
