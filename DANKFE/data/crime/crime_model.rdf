@@ -1,0 +1,595 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/"
+     xml:base="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:crime_model="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#"
+     xmlns:untitled-ontology-20="http://www.semanticweb.org/rodrigo/ontologies/2024/3/untitled-ontology-20#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/DASE_RULE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/avg -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/avg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasCrimeType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasCrimeType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDay"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDayPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDayPeriod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasMonth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasMonth"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasSeason"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasWeapon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasWeapon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#common_dist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#common_dist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#description -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#district -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#district"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#inside -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#inside"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#neighborhood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#neighborhood"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#post -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#post"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Algebric_dist_center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Algebric_dist_center"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lon"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Season"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_day -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_day"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_month"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_year"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/day_period -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/day_period"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lon"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#neighborhood"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/avg"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lat"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lat"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lat"/>
+        <DASE_RULE>Aggregation_neighborhood_lat___lat(?l) ^ avg(?l,?a) ^ neighborhood(?n) -&gt; neighborhood_lat(?a)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#neighborhood"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/avg"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lon"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lon"/>
+        <DASE_RULE>Aggregation_neighborhood_lon___lon(?l) ^ avg(?l,?a) ^ neighborhood(?n) -&gt; neighborhood_lon(?a)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasCrimeType"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#description"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/crime_type"/>
+        <DASE_RULE>Decomposition_crime_type___description(?x) ^ hasCrimeType(?x,?y) -&gt; crime_type(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDay"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_day"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_day"/>
+        <DASE_RULE>Decomposition_day___current_date(?x) ^ hasDay(?x,?y) -&gt; current_day(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasDayPeriod"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/day_period"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/day_period"/>
+        <DASE_RULE>Decomposition_day_period___current_date(?x) ^ hasDayPeriod(?x,?y) -&gt; day_period(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasMonth"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_month"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_month"/>
+        <DASE_RULE>Decomposition_month___current_date(?x) ^ hasMonth(?x,?y) -&gt; current_month(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasSeason"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Season"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Season"/>
+        <DASE_RULE>Mapping_season___current_date(?x) ^ hasSeason(?x, ?y) -&gt; Season(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasWeapon"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#weapon"/>
+        <DASE_RULE>Decomposition_weapon___weapon(?x) ^ hasWeapon(?x,?y) -&gt; weapon(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/hasYear"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_year"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/current_year"/>
+        <DASE_RULE>Decomposition_year___current_date(?x) ^ hasYear(?x,?y) -&gt; current_year(?y)___</DASE_RULE>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/dc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nl">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Algebric_dist_center</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lat"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model#lon"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#sin"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/dc"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Algebric_dist_center"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/dc"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Composition_district_lat</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lat"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#abs"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/r"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nt"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nt"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lat"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Composition_district_lon</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/neighborhood_lon"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nl"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#abs"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/r"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nl"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/nl"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/Composition_district_lon"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/crime_model/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
