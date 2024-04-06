@@ -347,7 +347,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#coal"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/coal"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
                     </rdf:Description>
                 </rdf:first>
@@ -357,7 +357,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#nuclear"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/nuclear"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
                             </rdf:Description>
                         </rdf:first>
@@ -388,7 +388,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/total_production"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_total_production"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
                     </rdf:Description>
                 </rdf:first>
@@ -417,7 +417,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#demand"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/demand"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
                             </rdf:Description>
                         </rdf:first>
@@ -448,7 +448,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/net_energy"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_net_energy"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
                     </rdf:Description>
                 </rdf:first>
@@ -467,7 +467,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#wind"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/wind"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
                     </rdf:Description>
                 </rdf:first>
@@ -477,7 +477,7 @@
                         <rdf:first>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#pumped"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/pumped"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
                             </rdf:Description>
                         </rdf:first>
@@ -508,7 +508,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_renewable"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
                     </rdf:Description>
                 </rdf:first>
@@ -568,7 +568,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable_percentage"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_renewable_percentage"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
                     </rdf:Description>
                 </rdf:first>
