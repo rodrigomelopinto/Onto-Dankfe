@@ -1,0 +1,894 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/"
+     xml:base="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:aq_model="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#"
+     xmlns:untitled-ontology-23="http://www.semanticweb.org/rodrigo/ontologies/2024/3/untitled-ontology-23#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/DASE_RULE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasDay"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasMonth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasMonth"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasPM10_Safe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasPM10_Safe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSO2_Safe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSO2_Safe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSeason"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasYear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/max -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#ALARM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#ALARM"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#Distance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#Distance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#Distance_Prov -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#Distance_Prov"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#O3_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM2.5_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#current_date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#current_date"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Algebric_PP_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Algebric_PP_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_avg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_avg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_avg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_avg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_max -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_max"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_min -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_std -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_std"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM10_safe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM10_safe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM25_Mean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM25_Mean"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/SO2_safe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/SO2_safe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Season"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_day -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_day"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_month"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_year"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_avg"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_avg"/>
+        <DASE_RULE>Aggregation_CO_Mean_week_avg___CO_Mean(?x) ^ avg(?x, ?a) ^ GbCity(?y) -&gt; CO_Mean_week_avg(?a)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/avg"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_avg"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_avg"/>
+        <DASE_RULE>Aggregation_NO2_Mean_week_avg___NO2_Mean(?x) ^ avg(?x,?a) ^ GbCity(?y) -&gt; NO2_Mean_week_avg(?a)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/max"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_max"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_max"/>
+        <DASE_RULE>Aggregation_NO2_Mean_week_max___NO2_Mean(?x) ^ max(?x,?m) ^ GbCity(?y) -&gt; NO2_Mean_week_max(?m)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_min"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_min"/>
+        <DASE_RULE>Aggregation_CO_Mean_week_min___CO_Mean(?x) ^ min(?x, ?m) ^ GbCity(?y) -&gt; CO_Mean_week_min(?m)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/min"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_min"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_min"/>
+        <DASE_RULE>Aggregation_NO2_Mean_week_min___NO2_Mean(?x) ^ min(?x,?m) ^ GbCity(?y) -&gt; NO2_Mean_week_min(?m)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_std"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/CO_Mean_week_std"/>
+        <DASE_RULE>Aggregation_CO_Mean_week_std___CO_Mean(?x) ^ std(?x, ?s) ^ GbCity(?y) -&gt; CO_Mean_week_std(?s)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#CO_Mean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#GbCity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/std"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#NO2_Mean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_std"/>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/NO2_Mean_week_std"/>
+        <DASE_RULE>Aggregation_NO2_Mean_week_std___NO2_Mean(?x) ^ std(?x,?s) ^ GbCity(?y) -&gt; NO2_Mean_week_std(?s)______http://www.w3.org/2002/07/owl#topObjectProperty</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasDay"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_day"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_day"/>
+        <DASE_RULE>Decomposition_day___current_date(?x) ^ hasDay(?x,?y) -&gt; current_day(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasMonth"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_day"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_month"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_month"/>
+        <DASE_RULE>Decomposition_month___current_date(?x) ^ hasMonth(?x,?y) -&gt; current_month(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasPM10_Safe"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#PM10_Mean"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM10_safe"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/PM10_safe"/>
+        <DASE_RULE>Decomposition_PM10_Safe___PM10_Mean(?x) ^ hasPM10_Safe(?x,?y) -&gt; PM10_safe(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSO2_Safe"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#SO2_Mean"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/SO2_safe"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/SO2_safe"/>
+        <DASE_RULE>Decomposition_SO2_safe___SO2_Mean(?x) ^ hasSO2_Safe(?x,?y) -&gt; SO2_safe(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasSeason"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Season"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Season"/>
+        <DASE_RULE>Mapping_season___current_date(?x) ^ hasSeason(?x,?y) -&gt; Season(?y)___</DASE_RULE>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/hasYear"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_year"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/current_year"/>
+        <DASE_RULE>Decomposition_year___current_date(?x) ^ hasYear(?x,?y) -&gt; current_year(?y)___</DASE_RULE>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Algebric_PP_Mean</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/PM2.5_Mean"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/PM10_Mean"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/res"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/Algebric_PP_mean"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/aq_model/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
