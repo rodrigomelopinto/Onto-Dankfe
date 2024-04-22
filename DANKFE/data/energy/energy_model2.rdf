@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/"
+     xml:base="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:energy_model="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#"
+     xmlns:untitled-ontology-21="http://www.semanticweb.org/rodrigo/ontologies/2024/3/untitled-ontology-21#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/DASE_RULE -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/DASE_RULE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasDay"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasEnergyPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasEnergyPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasMonth -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasMonth"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasSeason"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/coal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/coal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/demand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/demand"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/nuclear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/nuclear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/pumped -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/pumped"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/wind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/wind"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#biomass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#biomass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#ccgt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#ccgt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#coal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#coal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#current_date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#current_date"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#demand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#demand"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#frequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#frequency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#hydro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#hydro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#nuclear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#nuclear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#ocgt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#ocgt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#oil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#oil"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#prod_vs_avg -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#prod_vs_avg"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#pumped -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#pumped"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#solar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#solar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#wind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#wind"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_renewable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_renewable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_total_production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_total_production"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_net_energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_net_energy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_renewable_percentage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_renewable_percentage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Season"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_day -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_day"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_month"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/current_year"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/energy_price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/energy_price"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/net_energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/net_energy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable_percentage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable_percentage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/total_production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/total_production"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/hasEnergyPrice"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model#current_date"/>
+                <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/energy_price"/>
+            </owl:Restriction>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/energy_price"/>
+        <DASE_RULE>Decomposition_energy_price___current_date(?x) ^ hasEnergyPrice(?x, ?y) -&gt; energy_price(?y)___</DASE_RULE>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Composition_net_energy</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/total_production"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/demand"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_net_energy"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Algebric_renewable</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/wind"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/pumped"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_renewable"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Algebric_total_production</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/coal"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/nuclear"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Algebric_total_production"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Composition_renewable_percentage</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/renewable"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/total_production"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/x"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/y"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/Composition_renewable_percentage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rodrigo/ontologies/2024/3/energy_model/res"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
